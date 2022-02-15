@@ -1,14 +1,12 @@
 import os
 from io import BytesIO
 
-from django.core.files.base import ContentFile
-from django.db import models
-from django.contrib.auth.models import User
 from PIL import Image
+from django.contrib.auth.models import User
+from django.db import models
 
 
 # Extending User Model Using a One-To-One Link
-from users.images import resize
 
 
 class Profile(models.Model):
