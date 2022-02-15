@@ -2,7 +2,15 @@
 {% block title %}Profile Page{% endblock title %}
 {% block content %}
     <div class="row my-3 p-3">
-        <img class="rounded-circle account-img" src="{{ user.profile.avatar.url }} " style="cursor: pointer;"/>
+        <img src="{{ user.profile.avatar.url }} " style="cursor: pointer;"/> </div>
+    <div class="row my-3 p-3">
+        <img src="{{ user.profile.avatar_thumb_large.url }} " style="cursor: pointer;"/></div>
+    <div class="row my-3 p-3">
+        <img src="{{ user.profile.avatar_thumb_medium.url }} " style="cursor: pointer;"/></div>
+    <div class="row my-3 p-3">
+        <img src="{{ user.profile.avatar_thumb_small.url }} " style="cursor: pointer;"/></div>
+    <div class="row my-3 p-3">
+    <img src="{{ user.profile.avatar_thumb_mini.url }} " style="cursor: pointer;"/>
     </div>
     {% if user_form.errors %}
         <div class="alert alert-danger alert-dismissible" role="alert">
